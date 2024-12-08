@@ -1,0 +1,136 @@
+* {
+margin:0;
+padding:0;
+box-sizing:border-box
+}
+
+body {
+    font: arial;
+}
+/* Structure of the application */
+.title {
+    text-align: center;
+    margin: 20px 0;
+}
+.main {
+    margin: 4% 10%;
+    padding: 25px;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1), -5px 0 10px rgba(0,0,0,0.1), 0 -5px 10px rgba(0,0,0,0.1), 5px 0 10px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.1), inset 0 0 10px rgba(0,0,0,0.1);
+}
+.row:not(:last-child),.btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.row:last-child{
+    border-top: 2px solid black;
+    padding-top: 20px;
+    font-size: larger;
+}
+.row:nth-child(1) input {
+    width: 80%;
+}
+/* Stylings for the buttons */
+.btn {
+    background-color: #919491;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn:hover{
+    background-color: rgb(188, 190, 182);
+    color: rgb(33, 44, 54);
+}
+
+/* task styling  */
+.btns {
+    gap: 10px;
+}
+.task {
+    border: 1px solid #a69090;
+    padding: 5px 10px;
+    width:92%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 20px auto 100px;
+    gap: 10px;
+}
+
+.task input {
+    width: 16px;
+    height: 16px;
+}
+
+.task input {
+    width: 24px;
+    height: 24px;
+    accent-color: #1ca342;
+}
+
+.task-list{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(132, 132, 200);
+}
+
+/* Styling the search bar */
+.search-bar {
+    width: 80%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.main input {
+    width: 100%;
+    padding: 8px 32px 8px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .main {
+        margin: 4% 5%;
+    }
+    .row:nth-child(1) input {
+        width: 90%;
+    }
+    .search-bar {
+        width: 90%;
+    }
+    .main input {
+        padding: 8px 16px 8px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        margin: 4% 2%;
+    }
+    .search-bar {
+        width: 100%;
+    }
+    .task input {
+        width: 18px;
+        height: 18px;
+    }
+}
